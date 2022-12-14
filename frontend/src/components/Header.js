@@ -26,7 +26,6 @@ const Header = () => {
 export default Header;
 
 const Wrapper = styled.div`
-border: 2px solid purple;
 display: flex;
 width: 80%;
 margin-left: 10%;
@@ -38,7 +37,6 @@ height: 80px;
 `
 
 const NavMenu = styled.nav`
-border: 2px solid green;
 display: flex;
 margin-left: 50px;
 width: 72%;
@@ -54,7 +52,7 @@ font-size: 25px;
 .hamburger {
   width: 50px;
   display: none;
-  font-size: 24px;
+  font-size: 18px;
   user-select: none;
   }
   input[type=checkbox] {
@@ -65,14 +63,40 @@ font-size: 25px;
   display: none;
   position: absolute;
   background-color: #FCF8E3;
+  border: 2px solid black;
   right: 10%;
   padding: 16px;
   a{
-    display: block;
-    margin-bottom: 10px;
+  display: block;
+  margin-bottom: 10px;
   &:hover {
   display: inline-block;
-  border: 2px solid black;
+  width: 100px;
+  height: 40px;
+  position: relative;
+  background: red;
+  &:hover:after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-left: 20px solid white;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  }
+   &:hover:before{
+  content: "";
+  position: absolute;
+  right: -20px;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-left: 20px solid red;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  }
   }
   }
 
@@ -88,6 +112,7 @@ font-size: 25px;
   position: absolute;
   top: 80px;
   height: 200px;
+  width:150px;
   flex-direction: column;
   text-align: left;
   }

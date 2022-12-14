@@ -4,8 +4,8 @@ import { OuterWrapper, InnerWrapper } from 'styles/MainStyles';
 
 import Start from 'components/Start';
 import Summary from 'components/Summary';
-import Header from 'components/Header';
 import AboutUs from 'components/AboutUs';
+import Header from 'components/Header';
 
 export const App = () => {
   return (
