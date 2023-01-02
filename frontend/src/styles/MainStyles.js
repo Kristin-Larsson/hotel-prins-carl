@@ -13,3 +13,10 @@ export const InnerWrapper = styled.div`
     @media (min-width: 668px) {
     }
 `;
+
+export const H1 = styled.h1`
+    font-size: 15px;
+    color: hotpink;
+    @media (min-width: 668px) {
+    }
+`;

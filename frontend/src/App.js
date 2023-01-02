@@ -6,6 +6,7 @@ import Start from 'components/Start';
 import Summary from 'components/Summary';
 import AboutUs from 'components/AboutUs';
 import Header from 'components/Header';
+import GuestBook from 'components/GuestBook';
 
 export const App = () => {
   return (
@@ -18,6 +19,7 @@ export const App = () => {
           <Route path='/' element={<Start />} />
           <Route path='/summary' element={<Summary />} />
           <Route path='/about' element={<AboutUs />} />
+          <Route path='/guestbook' element={<GuestBook />} />
           </Routes>
         </BrowserRouter>
       </InnerWrapper>
