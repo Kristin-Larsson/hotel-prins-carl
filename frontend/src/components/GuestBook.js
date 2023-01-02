@@ -46,8 +46,8 @@ const GuestBook = () => {
   
   return (
     <section className='mainWrapper'>
-      <GuestBookForm 
-        onFormSubmit={handleFormSubmit}
+    <GuestBookForm
+      onFormSubmit={handleFormSubmit}
         newThought={newThought}
         onSetThoughtChange={handleOnNewThought}
         newName={newName}

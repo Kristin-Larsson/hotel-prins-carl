@@ -23,6 +23,13 @@ const GuestBookSchema = new mongoose.Schema({
     required: true,
     trim: true
   },
+    country: {
+    type: String,
+    minlength: 2,
+    maxlength: 140,
+    required: true,
+    trim: true
+  },
   likes: {
     type: Number,
     default: 0
@@ -58,9 +65,9 @@ app.get("/guestbook", async (req, res) => {
 })
 
 app.post("/guestbook", async (req, res) => {
-  const {message, name } = req.body
+  const {message, name, country } = req.body
   try {
-    const newGuestBook = await new GuestBook({ message, name }).save()
+    const newGuestBook = await new GuestBook({ message, name, country }).save()
     res.status(201).json({success: true, res: newGuestBook})
   } catch (e) {
     console.log(e)
@@ -76,7 +83,7 @@ app.post('/guestbook/:guestbookId/like', async (req, res) => {
   let guestbookToLike
   try { 
     const filter = {_id: guestbookId}
-    const update = { $inc : {'hearts': 1} }
+    const update = { $inc : {'likes': 1} }
 
     guestbookToLike = await GuestBook.findOneAndUpdate(filter, update, {
       returnOriginal: false
