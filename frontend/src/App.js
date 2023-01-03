@@ -1,6 +1,5 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { OuterWrapper, InnerWrapper } from 'styles/MainStyles';
 
 import Start from 'components/Start';
 import Summary from 'components/Summary';
@@ -12,8 +11,6 @@ import Book from 'components/Book';
 export const App = () => {
   return (
     <>
-    <OuterWrapper>
-      <InnerWrapper>
         <Header/>
         <BrowserRouter>
           <Routes>
@@ -24,8 +21,6 @@ export const App = () => {
           <Route path='/book' element={<Book />} />
           </Routes>
         </BrowserRouter>
-      </InnerWrapper>
-    </OuterWrapper>
     </>
   );
 }

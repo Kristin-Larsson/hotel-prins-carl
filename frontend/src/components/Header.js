@@ -5,51 +5,101 @@ import styled from 'styled-components'
 const Header = () => {
 
     return (
-    <>
     <Wrapper>
-    <Image src={Logo} alt="Prins Carl Logo" />
     <NavMenu>
+    <Image src={Logo} alt="Prins Carl Logo" />
+    <ContactButton>Contact us</ContactButton>
     <input type="checkbox" id="checkbox_toggle" />
-    <label for="checkbox_toggle" className="hamburger">&#9776;</label>
+    <label htmlFor="checkbox_toggle" className="hamburger">&#9776;</label>
     <div className="menu">
-      <a href="#">About us</a>
+      <a href="#">Book</a>
       <a href="#">Events</a>
       <a href="#">info</a>
       <a href="/Summary">Book</a>
     </div>
     </NavMenu>
+    <Call>040-040404</Call>
     </Wrapper>
-    </>
     )
 }
 
 export default Header;
 
+const ContactButton = styled.button`
+    display: block;
+    position: absolute;
+    background-color:#646f85;
+    top: 15px;
+    right:55px;
+    border: none;
+    color: white;
+    font-size: 10px;
+    font-family: 'Playfair Display', serif;
+    &:hover {
+    cursor: pointer;
+    }
+    @media (min-width: 668px) {
+    display: none;
+    }
+`
+const Call = styled.button`
+    display: none;
+    }
+    @media (min-width: 668px) {
+    display: block;
+    position: absolute;
+    background-color:#646f85;
+    right:15%;
+    border: none;
+    color: white;
+    font-size: 18px;
+    font-family: 'Playfair Display', serif;
+    &:hover {
+    cursor: pointer;
+    }
+`
+
 const Wrapper = styled.div`
-border: 2px solid blue;
-justify-content: center;
-display: flex;
-align-items: end;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    @media (min-width: 668px) {
+    width: 80%;
+    margin-left:10%;
+    height: 100px;
+    }
 `
 
 const Image = styled.img`
-height: 80px;
+height: 30px;
+@media (min-width: 668px) {
+height: 70px;
+margin-left:50px;
+}
 `
 
 const NavMenu = styled.nav`
-display: flex;
-margin-left: 50px;
-width: 72%;
-font-size: 25px;
-  a {
+//DESKTOP
+    width: 100%;
+    
+    a {
     font-family: 'Playfair Display', serif;
+    font-size: 25px;
     margin-left: 20px;
     text-decoration: none;
     color: black;
-  &:hover {
-    color: grey;
+    &:hover {
+    background-color: #646f85;
+    color: white;
     }
   }
+
+//MOBIL
+// Hamburger icon
 .hamburger {
   width: 50px;
   display: none;
@@ -59,63 +109,47 @@ font-size: 25px;
   input[type=checkbox] {
   display: none;
   }
-@media (max-width: 750px) {
+@media (max-width: 668px) {
   .menu {
   display: none;
-  position: absolute;
-  background-color: #FCF8E3;
-  border: 2px solid black;
-  right: 10%;
-  padding: 16px;
-  a{
-  display: block;
-  margin-bottom: 10px;
-  &:hover {
-  display: inline-block;
-  width: 100px;
-  height: 40px;
-  position: relative;
-  background: red;
-  &:hover:after{
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 0;
-  height: 0;
-  border-left: 20px solid white;
-  border-top: 20px solid transparent;
-  border-bottom: 20px solid transparent;
-  }
-   &:hover:before{
-  content: "";
-  position: absolute;
-  right: -20px;
-  bottom: 0;
-  width: 0;
-  height: 0;
-  border-left: 20px solid red;
-  border-top: 20px solid transparent;
-  border-bottom: 20px solid transparent;
-  }
+  background-color: white;
+    
+    a{
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 10px;
+    align-item: center;
+    margin-left: 40%;
+    margin-top: 30px;
+
+    &:hover {
+    display: inline-block;
+    width: 100px;
+    height: 40px;
+    position: relative;
+    color: hotpink;
+    background-color: none;
+  
   }
   }
 
   }
+  //POSITION OF ICON
  .hamburger {
   display: block;
   position: absolute;
-  top: 40px;
-  right:10%
+  top: 10px;
+  right:0px;
   }
+
+  //STYLING OF OPEN MENU
   input[type=checkbox]:checked ~ .menu{
   display: block;
   position: absolute;
-  top: 80px;
-  height: 200px;
-  width:150px;
+  top: 40px;
+  height: 100vh;
+  width:100%;
   flex-direction: column;
-  text-align: left;
   }
 }
 `

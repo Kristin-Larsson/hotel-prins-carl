@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const OuterWrapper = styled.div`
-    margin-top: 60px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -11,10 +10,9 @@ export const OuterWrapper = styled.div`
 `;
 
 export const InnerWrapper = styled.div`
-    border: 3px solid hotpink;
+    border: 2px solid green;
     background-color: white;
     width: 80%;
-    height: 100vh;
     @media (min-width: 668px) {
     }
 `;
