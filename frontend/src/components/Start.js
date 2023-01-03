@@ -30,6 +30,7 @@ export default Start;
 
 const HeroSection = styled.section`
 position: relative;
+width: 100%;
 `
 
 const Arrow = styled.div`
