@@ -61,7 +61,6 @@ const Call = styled.button`
 `
 
 const Wrapper = styled.div`
-    border: 2px solid yellow;
     background-color: white;
     display: flex;
     flex-direction: row;
@@ -88,8 +87,6 @@ margin-left:50px;
 const NavMenu = styled.nav`
 //DESKTOP
     width: 100%;
-    border: 2px solid green;
-    
 
     a {
     font-family: 'Playfair Display', serif;

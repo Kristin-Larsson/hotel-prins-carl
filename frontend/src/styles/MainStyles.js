@@ -9,11 +9,9 @@ export const OuterWrapper = styled.div`
 `;
 
 export const InnerWrapper = styled.div`
-    border: 2px solid green;
     background-color: white;
-    width: 100%;
+    width: 90%;
     @media (min-width: 668px) {
-    border: 2px solid green;
     background-color: white;
     width: 80%;
     }
@@ -28,3 +26,8 @@ export const H1 = styled.h1`
     font-size: 30px;   
     }
 `;
+
+export const Image = styled.img`
+  width: 100%;
+  height: auto;
+`
