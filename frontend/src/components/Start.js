@@ -32,38 +32,47 @@ position: relative;
 
 const HeroImage = styled.img`
   width: 100%;
-  height: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
 `
 const Button = styled.button`
 font-family: 'Playfair Display', serif;
 position: absolute;
-  top: 55%;
+  top: 65%;
   left: 50%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
-  background-color: #555;
+  background-color: white;
   color: white;
   font-size: 16px;
   padding: 8px 14px;
   border: none;
   cursor: pointer;
   border-radius: 5px;
-      @media (min-width: 668px) {
-    font-size: 25px;
-    }
+  a {
+    color: #80000E;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  @media (min-width: 668px) {
+  font-size: 25px;
+  }
 `
+
 
 const StartText = styled.h1`
 font-family: 'Playfair Display', serif;
 position: absolute;
-  top: 35%;
+  top: 50%;
   left: 50%;
+  width: 300px;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
-    font-family: 'Playfair Display', serif;
-    text-align: center;
-    font-size: 18px;
-    color: white;
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+  font-size: 20px;
+  color: #80000E;
+  background-color:white;
     @media (min-width: 668px) {
     font-size: 40px;
     }

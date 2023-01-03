@@ -5,15 +5,17 @@ export const OuterWrapper = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    align-items: center;
     width: 100%;
 `;
 
 export const InnerWrapper = styled.div`
     border: 2px solid green;
     background-color: white;
-    width: 80%;
+    width: 100%;
     @media (min-width: 668px) {
+    border: 2px solid green;
+    background-color: white;
+    width: 80%;
     }
 `;
 

@@ -27,13 +27,14 @@ export default Header;
 
 const ContactButton = styled.button`
     display: block;
+    align-items: center;
     position: absolute;
     background-color:#646f85;
-    top: 15px;
+    top: 18px;
     right:55px;
     border: none;
     color: white;
-    font-size: 10px;
+    font-size: 18px;
     font-family: 'Playfair Display', serif;
     &:hover {
     cursor: pointer;
@@ -60,22 +61,24 @@ const Call = styled.button`
 `
 
 const Wrapper = styled.div`
+    border: 2px solid yellow;
     background-color: white;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 40px;
+    height: 60px;
     @media (min-width: 668px) {
     width: 80%;
     margin-left:10%;
-    height: 100px;
+    height: 80px;
     }
 `
 
 const Image = styled.img`
-height: 30px;
+height: 50px;
+margin-left: 10px;
 @media (min-width: 668px) {
 height: 70px;
 margin-left:50px;
@@ -85,7 +88,9 @@ margin-left:50px;
 const NavMenu = styled.nav`
 //DESKTOP
     width: 100%;
+    border: 2px solid green;
     
+
     a {
     font-family: 'Playfair Display', serif;
     font-size: 25px;
@@ -101,9 +106,9 @@ const NavMenu = styled.nav`
 //MOBIL
 // Hamburger icon
 .hamburger {
-  width: 50px;
+  margin-right: 15px;
   display: none;
-  font-size: 18px;
+  font-size: 28px;
   user-select: none;
   }
   input[type=checkbox] {
@@ -146,7 +151,7 @@ const NavMenu = styled.nav`
   input[type=checkbox]:checked ~ .menu{
   display: block;
   position: absolute;
-  top: 40px;
+  top: 60px;
   height: 100vh;
   width:100%;
   flex-direction: column;
