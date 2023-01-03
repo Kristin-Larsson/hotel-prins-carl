@@ -3,26 +3,31 @@ import GuestBookForm from 'components/GuestBookForm'
 import GuestBookList from 'components/GuestBookList'
 
 const GuestBook = () => {
-  const [thoughts, setThoughts] = useState([])
-  const [newThought, setNewThought] = useState('')
+  const [messages, setMessage] = useState([])
+  const [newMessage, setNewMessage] = useState('')
   const [newName, setNewName] = useState('')
+  const [newCountry, setNewCountry] = useState('')
 
-  const handleOnNewThought = (event) => {
-    setNewThought(event.target.value)
+  const handleOnNewMessage = (event) => {
+    setNewMessage(event.target.value)
   }
 
   const handleOnNewName = (event) => {
     setNewName(event.target.value)
   }
 
+  const handleOnNewCountry = (event) => {
+    setNewCountry(event.target.value)
+  }
+
   useEffect(()=> {
-    fetchThoughts();
+    fetchMessage();
   }, [])
 
-  const fetchThoughts = () => {
+  const fetchMessage = () => {
     fetch('https://hotel-prins-carl-7xvds2m6na-lz.a.run.app/guestbook')
     .then(res => res.json())
-    .then(data => setThoughts(data))
+    .then(data => setMessage(data))
   }
 
 
@@ -33,33 +38,38 @@ const GuestBook = () => {
     const options = { 
       method: 'POST', 
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ message: newThought, name: newName }),
+      body: JSON.stringify({ message: newMessage, name: newName, country: newCountry }),
     }
   
     fetch('https://hotel-prins-carl-7xvds2m6na-lz.a.run.app/guestbook', options)
       .then((res) => res.json())
-      .then(() => fetchThoughts())
-      .then(()=> setNewThought(''))
+      .then(() => fetchMessage())
+      .then(()=> setNewMessage(''))
+      .then(()=> setNewCountry(''))
       .finally(()=> setNewName('')) //Extract it to another function to cleans up the input
   }
 
   
   return (
     <section className='mainWrapper'>
+    <div class="book-content">
     <GuestBookForm
-      onFormSubmit={handleFormSubmit}
-        newThought={newThought}
-        onSetThoughtChange={handleOnNewThought}
+        onFormSubmit={handleFormSubmit}
+        newMessage={newMessage}
+        onSetMessageChange={handleOnNewMessage}
         newName={newName}
         onSetNameChange={handleOnNewName}
+        newCountry={newCountry}
+        onSetCountryChange={handleOnNewCountry}
         />
 
-      {thoughts.map((thought)=> (
+      {messages.map((message)=> (
       <GuestBookList
-        key={thought._id}
-        thought={thought}
+        key={message._id}
+        message={message}
         />
       ))};
+    </div> 
     </section>
   );
 };

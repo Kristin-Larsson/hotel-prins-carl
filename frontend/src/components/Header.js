@@ -26,9 +26,9 @@ const Header = () => {
 export default Header;
 
 const Wrapper = styled.div`
+border: 2px solid blue;
+justify-content: center;
 display: flex;
-width: 80%;
-margin-left: 10%;
 align-items: end;
 `
 
@@ -42,6 +42,7 @@ margin-left: 50px;
 width: 72%;
 font-size: 25px;
   a {
+    font-family: 'Playfair Display', serif;
     margin-left: 20px;
     text-decoration: none;
     color: black;

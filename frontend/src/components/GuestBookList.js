@@ -2,14 +2,16 @@ import React from 'react'
 import { formatRelative } from 'date-fns'
 import styled from 'styled-components/macro';
 
-const GuestBookList = ({ thought }) => {
+const GuestBookList = ({ message }) => {
 
     return (
     <GuestBookListWrapper>
-         <MessageCard key={thought._id} >
-            <Message>{thought.name}</Message>
-            <Message>{thought.message}</Message>
-            <Time> {formatRelative(new Date(thought.createdAt), new Date())}</Time>
+         <MessageCard key={message._id} >
+            <Message>{message.message}</Message>
+            <SenderWrapper>
+            <Sender>{message.name} from {message.country}</Sender>
+            <Time> Written {formatRelative(new Date(message.createdAt), new Date())}</Time>
+            </SenderWrapper>
         </MessageCard>   
     </GuestBookListWrapper>
     );
@@ -18,35 +20,56 @@ const GuestBookList = ({ thought }) => {
 export default GuestBookList
 
 const GuestBookListWrapper = styled.section`
-  border: 2px solid rgb(165, 165, 165);
+  border: 2px solid brown;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 150px;
-  width: 400px;
-  background-color: white;
+  width: 100%;
+  background-color: #FCF8E3;
   margin-top: 20px;
-  box-shadow: 6px 6px;
     @media (min-width: 668px) {
+    width: 600px;
+    }
+`
+const SenderWrapper = styled.div`
+  border: 2px solid green;
+  font-size: 14px;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 100%;
+  background-color: #FCF8E3;
+    @media (min-width: 668px) {
+    width: 100%;
     }
 `
 
+
 const MessageCard = styled.form`
+  border: 2px solid hotpink;
   height: 150px;
   width: 90%;
+  font-family: 'Playfair Display', serif;
   overflow-wrap: break-word; 
     @media (min-width: 668px) {
     }
 `
 
 const Message = styled.p`
-  font-size: large;
+  font-size: 20px;
+    @media (min-width: 668px) {
+    }
+`
+
+const Sender = styled.p`
+  font-size: 14px;
     @media (min-width: 668px) {
     }
 `
 
 const Time = styled.p`
-  margin-right: 10px;
+    font-size: 14px;
     @media (min-width: 668px) {
     }
 `
