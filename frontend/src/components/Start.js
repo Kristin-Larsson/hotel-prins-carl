@@ -3,10 +3,12 @@ import Heroimgphone from '../images/heroimgphone.jpg'
 import Heroimgdesktop from '../images/heroimgdesktop.jpg'
 import HotelRoom from '../images/hotelroom.jpg'
 import Anno from '../images/anno1888.png'
+import ArrowIcon from '../icons/arrow-down.svg'
 import styled from 'styled-components'
 import SlideShowYstad from 'components/SlideShowYstad'
 import { Link } from 'react-router-dom';
 import { OuterWrapper, InnerWrapper, H1, P, Image, Section, LastSection } from 'styles/MainStyles';
+
 
 const Start = () => {
 
@@ -17,9 +19,11 @@ const Start = () => {
           <HeroImagePhone src={Heroimgphone} alt="Reception" />
           <HeroImageDesktop src={Heroimgdesktop} alt="Reception" />
           <Button>
-            <Link to='/book'>Book a room </Link>
+              <Link to='/book'>Book a room </Link>
+            	<div className="button__horizontal"></div>
+	            <div className="button__vertical"></div>
           </Button>
-          <Arrow><a href="#history"><span></span>DOWN</a></Arrow>
+          <Arrow><a href="#history"><span></span><Icon src={ArrowIcon} alt="Prins Carl Logo"/></a></Arrow>
         </HeroSection>
         <InnerWrapper>
         <Section id="history">
@@ -58,11 +62,22 @@ const Arrow = styled.div`
   position: absolute;
   top: 75%;
   left: 45%;
+  scroll-behavior: smooth;
   a{
   color: white;
   font-weight: bold;
   text-decoration: none;
+  
   }
+  @media (min-width: 668px) {
+  top: 90%;
+  }
+`
+const Icon = styled.img`
+  position: absolute;
+  top: 75%;
+  left: 45%;
+  width: 50px;
   @media (min-width: 668px) {
   top: 90%;
   }
@@ -103,14 +118,13 @@ position: absolute;
   border-radius: 5px;
     &:hover {
     cursor: pointer;
-    font-style: italic;
+    padding: 10px 16px;
  }
   a {
     color: #80000E;
     font-weight: bold;
     text-decoration: none;
   }
-
   @media (min-width: 668px) {
   font-size: 25px;
   }
@@ -126,7 +140,7 @@ font-family: 'Playfair Display', serif;
 position: absolute;
   top: 40%;
   left: 50%;
-  width: 20vh;
+  width: 30vh;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   font-family: 'Playfair Display', serif;

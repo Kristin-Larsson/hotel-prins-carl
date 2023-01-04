@@ -22,6 +22,8 @@ const Footer = () => {
         </InputButtonWrapper>
         <TitleLeft>LINKS</TitleLeft>
         <TextLeft>Book a room</TextLeft>
+        <TextLeft>Contact us</TextLeft>
+        <TextLeft>Information</TextLeft>
         </InnerWrapperFooter>
     </OuterWrapper>
     )
@@ -36,6 +38,8 @@ font-weight:500;
 `
 const TitleLeft = styled(Title)`
 text-align: left;
+font-size: 16px;
+margin: 0% 0% 0% 10%;
 `
 
 const Text = styled(P)`
@@ -46,6 +50,7 @@ line-height: 20px;
 
 const TextLeft = styled(P)`
 text-align: left;
+font-size: 14px;
 `
 
 const FooterInput = styled.input`
@@ -59,7 +64,7 @@ const SendButton = styled.button`
 margin-top: 10px;
 font-size: 14px;
 text-align: center;
-width: 200px;
+width: 210px;
 height: 30px;
 border: none;
 background-color:#646f85;

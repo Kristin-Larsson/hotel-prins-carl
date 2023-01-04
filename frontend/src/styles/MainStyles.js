@@ -11,7 +11,6 @@ export const OuterWrapper = styled.div`
 export const InnerWrapper = styled.div`
     background-color: white;
     width: 90%;
-    margin-top: -2px;
     @media (min-width: 668px) {
     background-color: white;
     width: 80%;
@@ -22,7 +21,7 @@ export const InnerWrapperFooter = styled(InnerWrapper)`
     background-color: transparent;
     width: 90%;
     margin-top: 2px;
-    height: 35vh;
+    height: 27vh;
     @media (min-width: 668px) {
     width: 80%;
     }
@@ -64,12 +63,13 @@ export const Section = styled.section`
 position: relative;
 margin-top: 10px;
 height: 100vh;
+width: 100%
 `
 export const LastSection = styled(Section)`
-border: 2px solid green;
 position: aboslute;
 margin-top: 0;
-height: 65vh;
+height: 73vh;
+background: white;
 `
 
 

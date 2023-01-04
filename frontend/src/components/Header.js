@@ -8,14 +8,14 @@ const Header = () => {
     return (
     <>
     <NavMenu>
-    <Image src={Logo} alt="Prins Carl Logo"/>
-    <ContactButton>Contact us</ContactButton>
+    <a href="/"><Image src={Logo} alt="Prins Carl Logo"/></a>
+    <a href="/contact"><ContactButton>Contact us</ContactButton></a>
     <input type="checkbox" id="checkbox_toggle" />
     <label htmlFor="checkbox_toggle" className="hamburger">&#9776;</label>
     <div className="menu">
       <a href="#">Prins Carl</a>
       <a href="#">Events</a>
-      <a href="#">Info</a>
+      <a href="/contact">Contact</a>
       <a href="/guestbook">Guestbook</a>
       <a href="/Summary">Book</a>
     </div>
@@ -69,7 +69,6 @@ height: 50px;
 margin-left: 10px;
 @media (min-width: 668px) {
 height: 70px;
-border: 2px solid red;
 }
 `
 
@@ -80,10 +79,12 @@ const NavMenu = styled.nav`
     flex-direction: row;
     align-items: center;
     width: 100%;
+    height: 55px;
     background-color:white;
     @media (min-width: 668px) {
     background-color: white;
     width: 100%;
+    height: 75px;
     }
 
     a {
@@ -110,7 +111,7 @@ const NavMenu = styled.nav`
   input[type=checkbox] {
   display: none;
   }
-@media (max-width: 668px) {
+  @media (max-width: 668px) {
   .menu {
   display: none;
   background-color: white;
@@ -125,10 +126,10 @@ const NavMenu = styled.nav`
     
     &:hover {
     display: inline-block;
-    width: 100px;
+    width: 120px;
     height: 40px;
-    position: relative;
-    color: hotpink;
+    position: absolut;
+    color: white;
     background-color: none;
   
   }
