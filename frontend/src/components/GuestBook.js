@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import GuestBookForm from 'components/GuestBookForm'
 import GuestBookList from 'components/GuestBookList'
+import { OuterWrapper, InnerWrapper } from 'styles/MainStyles';
 
 const GuestBook = () => {
   const [messages, setMessage] = useState([])
@@ -51,8 +52,8 @@ const GuestBook = () => {
 
   
   return (
-    <section className='mainWrapper'>
-    <div class="book-content">
+    <OuterWrapper>
+    <InnerWrapper>
     <GuestBookForm
         onFormSubmit={handleFormSubmit}
         newMessage={newMessage}
@@ -69,8 +70,8 @@ const GuestBook = () => {
         message={message}
         />
       ))};
-    </div> 
-    </section>
+    </InnerWrapper> 
+    </OuterWrapper>
   );
 };
 

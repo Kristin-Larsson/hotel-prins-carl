@@ -7,6 +7,7 @@ import AboutUs from 'components/AboutUs';
 import Header from 'components/Header';
 import GuestBook from 'components/GuestBook';
 import Book from 'components/Book';
+import Footer from 'components/Footer';
 
 export const App = () => {
   return (
@@ -21,6 +22,7 @@ export const App = () => {
           <Route path='/book' element={<Book />} />
           </Routes>
         </BrowserRouter>
+        <Footer/>
     </>
   );
 }
