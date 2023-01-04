@@ -34,7 +34,7 @@ font-size: 18px;
 margin-bottom: 0px;
 font-weight:500;
 `
-const TitleLeft = styled(FooterTitle)`
+const TitleLeft = styled(Title)`
 text-align: left;
 `
 
