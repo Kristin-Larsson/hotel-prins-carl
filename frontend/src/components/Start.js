@@ -6,6 +6,7 @@ import Anno from '../images/anno1888.png'
 import ArrowIcon from '../icons/arrow-down.svg'
 import styled from 'styled-components'
 import SlideShowYstad from 'components/SlideShowYstad'
+import Footer from 'components/Footer';
 import { Link } from 'react-router-dom';
 import { OuterWrapper, InnerWrapper, H1, P, Image, Section, LastSection } from 'styles/MainStyles';
 
@@ -13,6 +14,7 @@ import { OuterWrapper, InnerWrapper, H1, P, Image, Section, LastSection } from '
 const Start = () => {
 
     return (
+    <>
     <OuterWrapper>
         <HeroSection id="/">
           <StartText>Welcome to the family owned Hotel Prins Carl in Ystad</StartText>
@@ -49,6 +51,8 @@ const Start = () => {
         </LastSection>
       </InnerWrapper>
     </OuterWrapper>
+    <Footer/>
+    </>
     )
 }
 export default Start;
@@ -129,8 +133,17 @@ position: absolute;
   font-size: 25px;
   }
 `
-const LinkButton = styled(Button)`
-  top: 75%;
+const LinkButton = styled.a`
+  font-size: 20px;
+  bottom 20px;
+  font-family: 'Playfair Display', serif;
+  position: absolute;
+  bottom: 10%;
+  left: 25%;
+    a {
+    color: #80000E;
+    text-decoration: none;
+  }
 `
 
 
@@ -140,7 +153,7 @@ font-family: 'Playfair Display', serif;
 position: absolute;
   top: 40%;
   left: 50%;
-  width: 30vh;
+  width: 280px;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   font-family: 'Playfair Display', serif;

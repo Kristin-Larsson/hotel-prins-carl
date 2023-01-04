@@ -7,7 +7,6 @@ import AboutUs from 'components/AboutUs';
 import Header from 'components/Header';
 import GuestBook from 'components/GuestBook';
 import Book from 'components/Book';
-import Footer from 'components/Footer';
 import Contact from 'components/Contact';
 
 export const App = () => {
@@ -24,7 +23,7 @@ export const App = () => {
           <Route path='/contact' element={<Contact />} />
           </Routes>
         </BrowserRouter>
-        <Footer/>
+        
     </>
   );
 }

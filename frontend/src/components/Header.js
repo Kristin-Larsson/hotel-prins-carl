@@ -13,11 +13,11 @@ const Header = () => {
     <input type="checkbox" id="checkbox_toggle" />
     <label htmlFor="checkbox_toggle" className="hamburger">&#9776;</label>
     <div className="menu">
-      <a href="#">Prins Carl</a>
-      <a href="#">Events</a>
+      <a href="/book">Book a room</a>
       <a href="/contact">Contact</a>
+      <a href="#">Events</a>
       <a href="/guestbook">Guestbook</a>
-      <a href="/Summary">Book</a>
+      <a href="#">About us</a>
     </div>
     </NavMenu>
     <Call>040-040404</Call>

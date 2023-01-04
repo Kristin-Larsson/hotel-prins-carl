@@ -75,6 +75,35 @@ app.post("/guestbook", async (req, res) => {
   }
 })
 
+app.delete ('delete/:id', async (req, res) => {
+const id= req.params.id
+GuestBook.findByIdAndRemove({ _id: id }, function(err){
+  if(err){
+    console.log(err)
+    return res.status(500).send()
+    }
+return res.status(200).send()
+}
+)
+})
+
+app.delete("/delete/:id", async (req, res) => {
+  const id = req.params.id
+  try {
+    const guestbookToDelete = await GuestBook.deleteOne({ _id: id })
+    res.status(200).json(guestbookToDelete)
+  } catch (error) {
+    console.log(error)
+    res.status(400).json({
+      success: false,
+      body: { 
+        message: error 
+      }
+    })
+  }
+})
+
+
 app.post('/guestbook/:guestbookId/like', async (req, res) => {
   // Find the id of the guestbook message we want to like
   const guestbookId = req.params.guestbookId

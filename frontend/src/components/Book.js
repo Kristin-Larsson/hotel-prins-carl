@@ -1,18 +1,26 @@
 import React from 'react';
 import Booking from 'components/Booking';
-import styled from 'styled-components';
+import BookingFooter from 'components/BookingFooter';
+import HotelRoom from '../images/hotelroom.jpg'
+import { Image } from 'styles/MainStyles';
+import styled from 'styled-components'
 
 const Book = () => {
 
     return (
-    <Wrapper>
+    <>
+    <StartSection>
+    <Image src={HotelRoom} alt="Hotel Room" />
+    </StartSection>
     <Booking/>
-    </Wrapper>
+    </>
     )
 }
 
 export default Book;
 
-const Wrapper = styled.div`
+export const StartSection = styled.section`
 position: relative;
+width: 100%;
+margin-top: -15px;
 `

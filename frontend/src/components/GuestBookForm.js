@@ -60,9 +60,6 @@ const GuestBookForm = ( { onFormSubmit, newMessage, onSetMessageChange, onSetNam
 export default GuestBookForm;
 
 const GuestBookFormWrapper = styled.section`
-  background: #ae9d72;
-	background-image: url("https://i.imgur.com/0kjMcUe.png");
-  border: 2px solid rgb(165, 165, 165);
   height: 300px;
   width: 100%;
     @media (min-width: 668px) {
@@ -71,6 +68,7 @@ const GuestBookFormWrapper = styled.section`
     }
 `
 const TextAreaName = styled.textarea`
+  font-family: 'Playfair Display', serif;
   resize: none;
   height: 20px;
   margin-left: 20px;
@@ -80,6 +78,7 @@ const TextAreaName = styled.textarea`
 `
 
 const TextArea = styled.textarea`
+  font-family: 'Playfair Display', serif;
   resize: none;
   height: 65px;
   margin-left: 20px;
@@ -89,30 +88,31 @@ const TextArea = styled.textarea`
 `
 
 const TextAreaCountry = styled.textarea`
+  font-family: 'Playfair Display', serif;
   resize: none;
   height: 30px;
-  margin-left: 20px;
-  width: 80%;
+  margin-left: 10px;
+  width: 90%;
     @media (min-width: 668px) {
     }
 `
 
 const SelectCountry = styled.select`
   resize: none;
-  height: 30px;
-  width: 80px;
+  height: 37px;
+  width: 110px;
     @media (min-width: 668px) {
     }
 `
 
 const SendButton = styled.button`
   margin-left: 20px;
-  margin-top: 10px;
-  background-color: #ffadad;
-  border-radius: 20px;
-  border: none;
+  margin-top: 15px;
+  background-color: white;
+  border: 1px solid black;
   padding: 7px;
-  width: 250px;
+  height: 37px;
+  width: 100px;
   font-weight:600;
   font-size: 15px;
     @media (min-width: 668px) {

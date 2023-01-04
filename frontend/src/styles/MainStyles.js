@@ -19,9 +19,11 @@ export const InnerWrapper = styled.div`
 
 export const InnerWrapperFooter = styled(InnerWrapper)`
     background-color: transparent;
+    position: relative;
     width: 90%;
     margin-top: 2px;
     height: 27vh;
+    bottom: 0px;
     @media (min-width: 668px) {
     width: 80%;
     }
@@ -71,7 +73,6 @@ margin-top: 0;
 height: 73vh;
 background: white;
 `
-
 
 export const Image = styled.img`
   width: 100%;

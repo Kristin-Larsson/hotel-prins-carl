@@ -12,11 +12,12 @@ const Booking = url => {
     document.body.appendChild(script);
 
     return () => {
-      
       document.body.removeChild(script);
     }
   }, [url]);
 };
 
 export default Booking;
+
+
 
