@@ -5,8 +5,8 @@ import Start from 'components/Start';
 import Summary from 'components/Summary';
 import AboutUs from 'components/AboutUs';
 import Header from 'components/Header';
-import GuestBook from 'components/GuestBook';
-import Book from 'components/Book';
+import GuestBook from 'components/Guestbook/GuestBook';
+import Book from 'components/Booking/Book';
 import Contact from 'components/Contact';
 
 export const App = () => {

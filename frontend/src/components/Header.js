@@ -1,5 +1,6 @@
 import React from 'react';
 import Logo from '../images/prinscarl_logo.png'
+import Phone from '../icons/phone.png'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom';
 
@@ -13,14 +14,16 @@ const Header = () => {
     <input type="checkbox" id="checkbox_toggle" />
     <label htmlFor="checkbox_toggle" className="hamburger">&#9776;</label>
     <div className="menu">
+      <div className="linkwrapper">
       <a href="/book">Book a room</a>
       <a href="/contact">Contact</a>
       <a href="#">Events</a>
       <a href="/guestbook">Guestbook</a>
       <a href="#">About us</a>
+      </div>
     </div>
+    <Call><PhoneIcon src={Phone} alt="Prins Carl Logo"/>040-040404</Call>
     </NavMenu>
-    <Call>040-040404</Call>
     </>
     )
 }
@@ -46,45 +49,60 @@ const ContactButton = styled.button`
     }
 `
 const Call = styled.button`
-    display: none;
-    }
-    @media (min-width: 668px) {
-    display: block;
-    align-items: center;
-    position: absolute;
-    background-color:#646f85;
-    top: 22px;
-    right:55px;
-    border: none;
-    color: white;
-    font-size: 18px;
-    font-family: 'Playfair Display', serif;
-    &:hover {
-    cursor: pointer;
-    }
+display: none;
+@media (min-width: 668px) {
+display: unset;
+background-color: white;
+margin-right: 20px;
+border: none;
+font-family: 'PT Sans', sans-serif;
+font-size: 18px;
+}
 `
 
 const Image = styled.img`
-height: 50px;
-margin-left: 10px;
+height: 47px;
+padding-top: 5px;
 @media (min-width: 668px) {
-height: 70px;
+height: 80px;
+}
+`
+
+const PhoneIcon = styled.img`
+display: none;
+height: 20px;
+margin-left: 10px;
+padding-top: 5px;
+@media (min-width: 668px) {
+display: unset;
+height: 45px;
 }
 `
 
 const NavMenu = styled.nav`
-//DESKTOP
     background-color: white;
     display: flex;
     flex-direction: row;
-    align-items: center;
+    justify-content: space-between;
+    align-items: flex-end;
     width: 100%;
     height: 55px;
     background-color:white;
+
+//DESKTOP
     @media (min-width: 668px) {
     background-color: white;
     width: 100%;
-    height: 75px;
+    height: 95px;
+    }
+
+    .linkwrapper {
+      @media (min-width: 668px){
+      display:flex;
+      margin-bottom: 10px;
+      width: 550px;
+      justify-content: space-between;
+      }
     }
 
     a {
@@ -92,10 +110,16 @@ const NavMenu = styled.nav`
     font-size: 20px;
     text-decoration: none;
     color: black;
-    margin-left: 20px;
     &:hover {
-    background-color: #646f85;
-    color: white;
+    }
+    @media (min-width: 668px) {
+    font-family: 'PT Sans', sans-serif;
+    text-transform: uppercase;
+    font-size: 18px;
+    &:hover {
+    font-family: 'Playfair Display', serif;
+    font-size: 19px;
+    }
     }
     
   }
@@ -121,12 +145,12 @@ const NavMenu = styled.nav`
     display: block;
     margin-bottom: 10px;
     align-item: center;
-    margin-left: 40%;
-    margin-top: 30px;
+    text-align:center;
+    margin-top: 40px;
+    margin-left: 0px;
     
     &:hover {
     display: inline-block;
-    width: 120px;
     height: 40px;
     position: absolut;
     color: white;

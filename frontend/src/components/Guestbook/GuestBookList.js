@@ -14,13 +14,12 @@ const GuestBookList = ({ message }) => {
             </SenderWrapper>
         </MessageCard>   
     </GuestBookListWrapper>
-    );
-};
+    )
+}
 
 export default GuestBookList
 
 const GuestBookListWrapper = styled.section`
-  border: 2px solid brown;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -33,7 +32,6 @@ const GuestBookListWrapper = styled.section`
     }
 `
 const SenderWrapper = styled.div`
-  border: 2px solid green;
   font-size: 14px;
   align-items: center;
   justify-content: center;
@@ -47,7 +45,6 @@ const SenderWrapper = styled.div`
 
 
 const MessageCard = styled.form`
-  border: 2px solid hotpink;
   height: 150px;
   width: 90%;
   font-family: 'Playfair Display', serif;

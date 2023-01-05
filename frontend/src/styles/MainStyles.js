@@ -56,6 +56,12 @@ export const P = styled.p`
     font-size: 18px;
     margin: 0% 10% 0% 10%; 
     color: black;
+    a{
+    font-family: 'PT Sans', sans-serif;
+    text-transform: uppercase;
+    color: #80000E;
+    text-decoration: none;
+    }
     @media (min-width: 668px) {
     font-size: 20px;   
     }

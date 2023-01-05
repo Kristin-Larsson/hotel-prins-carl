@@ -4,8 +4,9 @@ import Heroimgdesktop from '../images/heroimgdesktop.jpg'
 import HotelRoom from '../images/hotelroom.jpg'
 import Anno from '../images/anno1888.png'
 import ArrowIcon from '../icons/arrow-down.svg'
+import ArrowIconRight from '../icons/right-arrow.svg'
 import styled from 'styled-components'
-import SlideShowYstad from 'components/SlideShowYstad'
+import SlideShowYstad from 'components/Slideshow/SlideShowYstad'
 import Footer from 'components/Footer';
 import { Link } from 'react-router-dom';
 import { OuterWrapper, InnerWrapper, H1, P, Image, Section, LastSection } from 'styles/MainStyles';
@@ -31,23 +32,19 @@ const Start = () => {
         <Section id="history">
           <Image src={Anno} alt="Anno 188" />
           <H1>Anno 1888</H1>
-          <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vulputate commodo pulvinar. Suspendisse vitae ante pulvinar, convallis lectus vitae, tincidunt ex. Praesent convallis tortor purus, sed facilisis ligula tempus in. Nullam varius, tortor et vestibulum molestie, dolor orci varius nisl, ut vestibulum arcu nunc sed mi. Proin ultrices nisl eu mi consectetur rhoncus. Sed cursus auctor ante, at sagittis felis aliquet quis. Sed egestas quam at luctus egestas. Morbi dapibus mauris nec feugiat varius.</P>
-          <LinkButton>
-            <Link to='/book'>Book a room </Link>
-          </LinkButton>
+          <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vulputate commodo pulvinar. Suspendisse vitae ante pulvinar, convallis lectus vitae, tincidunt ex. </P>
+          <P><Link to='/book'>Book a room </Link><ArrowRightIcon src={ArrowIconRight} alt="Arrow pointing right"/></P>
         </Section>
         <Section id="ourrooms">
           <Image src={HotelRoom} alt="Hotel Room" />
           <H1>Our rooms</H1>
-          <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vulputate commodo pulvinar. Suspendisse vitae ante pulvinar, convallis lectus vitae, tincidunt ex. Praesent convallis tortor purus, sed facilisis ligula tempus in. Nullam varius, tortor et vestibulum molestie, dolor orci varius nisl, ut vestibulum arcu nunc sed mi. Proin ultrices nisl eu mi consectetur rhoncus. Sed cursus auctor ante, at sagittis felis aliquet quis. Sed egestas quam at luctus egestas. Morbi dapibus mauris nec feugiat varius.</P>
-          <LinkButton>
-            <Link to='/rooms'>Read more about our rooms </Link>
-          </LinkButton>
+          <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vulputate commodo pulvinar. Suspendisse vitae ante pulvinar, convallis lectus vitae, tincidunt ex. </P>
+          <P><Link to='/rooms'>Read more about our rooms </Link><ArrowRightIcon src={ArrowIconRight} alt="Arrow pointing right"/></P>
         </Section>
         <LastSection id="ystad">
           <SlideShowYstad />
           <H1>Ystad</H1>
-          <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vulputate commodo pulvinar. Suspendisse vitae ante pulvinar, convallis lectus vitae, tincidunt ex. Praesent convallis tortor purus, sed facilisis ligula tempus in. Nullam varius, tortor et vestibulum molestie, dolor orci varius nisl, ut vestibulum arcu nunc sed mi.</P>
+          <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vulputate commodo pulvinar.</P>
         </LastSection>
       </InnerWrapper>
     </OuterWrapper>
@@ -82,6 +79,12 @@ const Icon = styled.img`
   top: 75%;
   left: 45%;
   width: 50px;
+  @media (min-width: 668px) {
+  top: 90%;
+  }
+`
+const ArrowRightIcon = styled.img`
+  width: 16px;
   @media (min-width: 668px) {
   top: 90%;
   }
@@ -133,19 +136,6 @@ position: absolute;
   font-size: 25px;
   }
 `
-const LinkButton = styled.a`
-  font-size: 20px;
-  bottom 20px;
-  font-family: 'Playfair Display', serif;
-  position: absolute;
-  bottom: 10%;
-  left: 25%;
-    a {
-    color: #80000E;
-    text-decoration: none;
-  }
-`
-
 
 
 const StartText = styled.h1`

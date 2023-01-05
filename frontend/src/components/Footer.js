@@ -12,9 +12,7 @@ const Footer = () => {
         <InputButtonWrapper>
         <label htmlFor='new-message'>
             <FooterInput
-                type="input"
-            //   onChange={onSetNameChange}
-            //   value={newName}
+              type="email"
               placeholder='Email'
               />
         </label>

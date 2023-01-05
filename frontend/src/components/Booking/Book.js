@@ -1,7 +1,6 @@
 import React from 'react';
-import Booking from 'components/Booking';
-import BookingFooter from 'components/BookingFooter';
-import HotelRoom from '../images/hotelroom.jpg'
+import Booking from 'components/Booking/Booking';
+import HotelRoom from 'images/hotelroom.jpg'
 import { Image } from 'styles/MainStyles';
 import styled from 'styled-components'
 

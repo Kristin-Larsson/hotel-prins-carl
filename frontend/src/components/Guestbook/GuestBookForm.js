@@ -38,11 +38,9 @@ const GuestBookForm = ( { onFormSubmit, newMessage, onSetMessageChange, onSetNam
             <option value="Germany">🇩🇪</option>
             </SelectCountry>
           <TextAreaCountry 
-             className='input-text'
              onChange={onSetCountryChange}
              value={newCountry}
-              id='new-thought'
-              name='new-thought'
+              id='country'
               placeholder='Country'
               />
             </CountryWrapper>
@@ -54,8 +52,8 @@ const GuestBookForm = ( { onFormSubmit, newMessage, onSetMessageChange, onSetNam
                 </SendButton>
         </form>
        </GuestBookFormWrapper>
-    );
-};
+    )
+}
 
 export default GuestBookForm;
 

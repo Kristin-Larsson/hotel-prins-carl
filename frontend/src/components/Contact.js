@@ -1,9 +1,11 @@
 import React from 'react';
 import { OuterWrapper, InnerWrapper, LastSection, H1 } from 'styles/MainStyles';
+import Footer from 'components/Footer';
 
 const Contact = () => {
 
     return (
+    <>
     <OuterWrapper>
         <InnerWrapper>
         <LastSection>
@@ -12,6 +14,8 @@ const Contact = () => {
     </LastSection>
     </InnerWrapper>
     </OuterWrapper>
+    <Footer/>
+    </>
     )
 }
 

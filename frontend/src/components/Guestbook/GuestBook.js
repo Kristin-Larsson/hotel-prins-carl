@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
-import GuestBookForm from 'components/GuestBookForm'
-import GuestBookList from 'components/GuestBookList'
+import GuestBookForm from 'components/Guestbook/GuestBookForm'
+import GuestBookList from 'components/Guestbook/GuestBookList'
 import { OuterWrapper, InnerWrapper } from 'styles/MainStyles';
 
 const GuestBook = () => {
