@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 
 import Start from 'components/Start';
 import Summary from 'components/Summary';
@@ -26,6 +26,7 @@ export const App = () => {
           <Route path='/info' element={<Info />} />
           <Route path='/aboutus' element={<AboutUs />} />
           <Route path='/breakfast' element={<Breakfast />} />
+          <Route path='*' element={<Navigate to="/" />} />
           </Routes>
         </BrowserRouter>
         
