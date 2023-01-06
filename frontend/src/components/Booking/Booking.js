@@ -7,7 +7,7 @@ const Booking = url => {
     script.src = "https://secured.sirvoy.com/widget/sirvoy.js";
     script.async = true;
     script.setAttribute('data-form-id', '552f9a950d813')
-    script.setAttribute('data-target-confirmation-url', 'https://localhost:3000/summary')
+    script.setAttribute('data-target-confirmation-url', 'https://hotelprinscarl.netlify.app/summary')
     
     document.body.appendChild(script);
 

@@ -6,21 +6,21 @@ import styled from 'styled-components'
 const slideImages = [
   {
     url: 'images/slide_2.jpg',
-    caption: 'Slide 1'
+    caption: 'Bildspel bild 1'
   },
   {
     url: 'images/slide_3.jpg',
-    caption: 'Slide 2'
+    caption: 'Bildspel bild 2'
   },
   {
     url: 'images/slide_4.jpg',
-    caption: 'Slide 3'
+    caption: 'Bildspel bild 3'
   },
 ];
 
 const Slideshow = () => {
     return (
-      <div className="slide-container">
+      <SlideContainer>
         <Slide>
          {slideImages.map((slideImage, index)=> (
             <SlideWrapper key={index}>
@@ -30,16 +30,33 @@ const Slideshow = () => {
             </SlideWrapper>
           ))} 
         </Slide>
-      </div>
+      </SlideContainer>
     )
 }
 
 export default Slideshow;
 
+const SlideContainer = styled.div`
+border: 2px solid green;
+  width: 500px;
+  height: auto;
+  margin-top: 15px;
+  @media (min-width: 668px) {
+  width: 50%;
+  width: 600px;
+  height: 460px;
+  margin: 15px;
+    }
+`
+
 const SlideWrapper = styled.div`
 border: 2px solid black;
 height: 250px;
+width: 100%;
 @media (min-width: 668px) {
-height: 400px;
-border: 2px solid red;
+ width: 90%;
+ padding-left: 10%;
+ height: 460px;
+ margin: 15px;
+ border: 2px solid red;
 }`

@@ -15,11 +15,13 @@ const Header = () => {
     <label htmlFor="checkbox_toggle" className="hamburger">&#9776;</label>
     <div className="menu">
       <div className="linkwrapper">
-      <a href="/book">Book a room</a>
-      <a href="/contact">Contact</a>
-      <a href="#">Events</a>
-      <a href="/guestbook">Guestbook</a>
-      <a href="#">About us</a>
+      <a href="/book">Book a room |</a>
+      <a href="/information">Contact & information |</a>
+      <a href="/breakfast">Breakfast |</a>
+      <a href="/Events">Events |</a>
+      <a href="#">Photoalbum |</a>
+      <a href="/aboutus">About us |</a>
+      <a href="/guestbook">Guestbook |</a>
       </div>
     </div>
     <Call><PhoneIcon src={Phone} alt="Prins Carl Logo"/>040-040404</Call>
@@ -44,27 +46,37 @@ const ContactButton = styled.button`
     &:hover {
     cursor: pointer;
     }
-    @media (min-width: 668px) {
+    @media (min-width: 1020px) {
     display: none;
     }
 `
 const Call = styled.button`
 display: none;
-@media (min-width: 668px) {
+@media (min-width: 1020px) {
 display: unset;
+display: flex;
+align-items: flex-end;
+height: 70px;
+width: 190px;
+padding-bottom: 10px;
 background-color: white;
-margin-right: 20px;
+margin-right: 40px;
 border: none;
 font-family: 'PT Sans', sans-serif;
-font-size: 18px;
+font-size: 20px;
+&:hover {
+    font-family: 'Playfair Display', serif;
+    font-size: 21px;
+    }
 }
 `
 
 const Image = styled.img`
 height: 47px;
 padding-top: 5px;
-@media (min-width: 668px) {
+@media (min-width: 1020px) {
 height: 80px;
+padding-left: 40px;
 }
 `
 
@@ -73,13 +85,14 @@ display: none;
 height: 20px;
 margin-left: 10px;
 padding-top: 5px;
-@media (min-width: 668px) {
+@media (min-width: 1020px) {
 display: unset;
 height: 45px;
 }
 `
 
 const NavMenu = styled.nav`
+    border: 2px solid yellow;
     background-color: white;
     display: flex;
     flex-direction: row;
@@ -87,20 +100,22 @@ const NavMenu = styled.nav`
     align-items: flex-end;
     width: 100%;
     height: 55px;
-    background-color:white;
 
 //DESKTOP
-    @media (min-width: 668px) {
+    @media (min-width: 1020px) {
     background-color: white;
     width: 100%;
     height: 95px;
     }
 
     .linkwrapper {
-      @media (min-width: 668px){
+      @media (min-width: 1020px){
+      position: absolute;
+      top: 62px;
+      right: 220px;
       display:flex;
-      margin-bottom: 10px;
-      width: 550px;
+      width: 900px;
+      height: 25px;
       justify-content: space-between;
       }
     }
@@ -110,9 +125,8 @@ const NavMenu = styled.nav`
     font-size: 20px;
     text-decoration: none;
     color: black;
-    &:hover {
-    }
-    @media (min-width: 668px) {
+
+    @media (min-width: 1020px) {
     font-family: 'PT Sans', sans-serif;
     text-transform: uppercase;
     font-size: 18px;
@@ -135,12 +149,13 @@ const NavMenu = styled.nav`
   input[type=checkbox] {
   display: none;
   }
-  @media (max-width: 668px) {
+  @media (max-width: 1020px) {
   .menu {
   display: none;
   background-color: white;
   
     a{
+    height: 30px;
     text-transform: uppercase;
     display: block;
     margin-bottom: 10px;
@@ -150,10 +165,9 @@ const NavMenu = styled.nav`
     margin-left: 0px;
     
     &:hover {
-    display: inline-block;
     height: 40px;
     position: absolut;
-    color: white;
+    color: grey;
     background-color: none;
   
   }

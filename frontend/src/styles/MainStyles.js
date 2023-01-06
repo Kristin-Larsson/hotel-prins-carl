@@ -9,11 +9,13 @@ export const OuterWrapper = styled.div`
 `;
 
 export const InnerWrapper = styled.div`
+    border: 2px solid blue;
     background-color: white;
     width: 90%;
     @media (min-width: 668px) {
     background-color: white;
     width: 80%;
+    padding-bottom:150px;
     }
 `;
 
@@ -68,10 +70,17 @@ export const P = styled.p`
 `;
 
 export const Section = styled.section`
-position: relative;
+display: flex;
+flex-direction: column;
+align-items: center;
 margin-top: 10px;
 height: 100vh;
-width: 100%
+width: 100%;
+@media (min-width: 668px) {
+height: auto;
+margin-top:150px;
+justify-content:center;
+}
 `
 export const LastSection = styled(Section)`
 position: aboslute;
@@ -79,9 +88,49 @@ margin-top: 0;
 height: 73vh;
 background: white;
 `
+export const SectionContainer = styled.div`
+background-color: white;
+@media (min-width: 668px) {
+border-radius: 5px;
+display: flex;
+flex-direction: row;
+height: 500px;
+align-items: center;
+background-color: rgb(250, 241, 228);
+border: 2px solid black;
+width: 70%
+}
+`
+
 
 export const Image = styled.img`
   width: 100%;
   height: auto;
   margin-top: 15px;
+  @media (min-width: 668px) {
+    width: 50%;
+    max-width: auto;
+    height: 460px;
+    margin: 15px;
+    }
+`
+
+export const ImageFirst = styled.img`
+  width: 100%;
+  height: auto;
+  margin-top: 15px;
+  @media (min-width: 668px) {
+    display:none
+    }
+`
+
+export const ImageLast = styled.img`
+    display:none;
+  @media (min-width: 668px) {
+    display: unset;
+    width: 50%;
+    max-width: auto;
+    height: 460px;
+    margin: 15px;
+    }
 `
