@@ -9,7 +9,6 @@ export const OuterWrapper = styled.div`
 `;
 
 export const InnerWrapper = styled.div`
-    border: 2px solid blue;
     background-color: white;
     width: 90%;
     @media (min-width: 668px) {

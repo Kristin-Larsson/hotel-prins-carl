@@ -2,7 +2,6 @@ import React from 'react';
 import Logo from '../images/prinscarl_logo.png'
 import Phone from '../icons/phone.png'
 import styled from 'styled-components'
-import { Link } from 'react-router-dom';
 
 const Header = () => {
 
@@ -10,7 +9,7 @@ const Header = () => {
     <>
     <NavMenu>
     <a href="/"><Image src={Logo} alt="Prins Carl Logo"/></a>
-    <a href="/contact"><ContactButton>Contact us</ContactButton></a>
+    <a href="/information"><ContactButton>Contact us</ContactButton></a>
     <input type="checkbox" id="checkbox_toggle" />
     <label htmlFor="checkbox_toggle" className="hamburger">&#9776;</label>
     <div className="menu">
@@ -92,7 +91,6 @@ height: 45px;
 `
 
 const NavMenu = styled.nav`
-    border: 2px solid yellow;
     background-color: white;
     display: flex;
     flex-direction: row;

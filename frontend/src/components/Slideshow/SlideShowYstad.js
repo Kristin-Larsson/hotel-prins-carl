@@ -5,15 +5,12 @@ import styled from 'styled-components'
 
 const slideImages = [
   {
-    url: 'images/slide_2.jpg',
     caption: 'Bildspel bild 1'
   },
   {
-    url: 'images/slide_3.jpg',
     caption: 'Bildspel bild 2'
   },
   {
-    url: 'images/slide_4.jpg',
     caption: 'Bildspel bild 3'
   },
 ];
@@ -38,12 +35,12 @@ export default Slideshow;
 
 const SlideContainer = styled.div`
 border: 2px solid green;
-  width: 500px;
+  width: 330px;
   height: auto;
   margin-top: 15px;
   @media (min-width: 668px) {
   width: 50%;
-  width: 600px;
+  width: 400px;
   height: 460px;
   margin: 15px;
     }

@@ -6,7 +6,6 @@ width: 100%;
 `
 
 export const OverlayWrapper = styled.div`
-    border: 2px solid lime;
     display: flex;
     flex-direction: column;
     justify-content: center;
