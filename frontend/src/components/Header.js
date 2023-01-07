@@ -15,7 +15,7 @@ const Header = () => {
     <div className="menu">
       <div className="linkwrapper">
       <a href="/book">Book a room |</a>
-      <a href="/information">Contact & information |</a>
+      <a href="/info">Contact & information |</a>
       <a href="/breakfast">Breakfast |</a>
       <a href="/Events">Events |</a>
       <a href="#">Photoalbum |</a>
