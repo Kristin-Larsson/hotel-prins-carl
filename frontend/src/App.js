@@ -24,7 +24,6 @@ export const App = () => {
           <Route path='/guestbook' element={<GuestBook />} />
           <Route path='/book' element={<Book />} />
           <Route path='/info' element={<Info />} />
-          <Route path='/aboutus' element={<AboutUs />} />
           <Route path='/breakfast' element={<Breakfast />} />
           <Route path='*' element={<Navigate to="/" />} />
           </Routes>
