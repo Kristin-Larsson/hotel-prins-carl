@@ -10,20 +10,21 @@ import Footer from 'components/Footer';
 import { Link } from 'react-router-dom';
 import { HeroSection, OverlayWrapper, StartText, Button, Arrow, Icon, ArrowRightIcon, HeroImageDesktop, HeroImagePhone } from 'components/StyleStart';
 import { OuterWrapper, InnerWrapper, H1, P, Image, ImageFirst, ImageLast, Section, LastSection, SectionContainer } from 'styles/MainStyles';
-
+import { useTranslation } from "react-i18next";
 
 const StartMobile = () => {
+const { t } = useTranslation();
 
     return (
     <>
     <OuterWrapper>
         <HeroSection id="/">
           <OverlayWrapper>
-          <StartText>Welcome to the family owned Hotel Prins Carl in Ystad</StartText>
+          <StartText>{t('welcome')}</StartText>
           <HeroImagePhone src={Heroimgphone} alt="Reception" />
           <HeroImageDesktop src={Heroimgdesktop} alt="Reception" />
           <Button>
-              <Link to='/book'>Book a room </Link>
+              <Link to='/book'>{t('bookAroom')} </Link>
           </Button>
           <Arrow><a href="#history"><span></span><Icon src={ArrowIcon} alt="Prins Carl Logo"/></a></Arrow>
           </OverlayWrapper>
