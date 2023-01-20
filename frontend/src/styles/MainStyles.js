@@ -89,15 +89,27 @@ background: white;
 `
 export const SectionContainer = styled.div`
 background-color: white;
-@media (min-width: 668px) {
-border-radius: 5px;
-display: flex;
-flex-direction: row;
-height: 500px;
-align-items: center;
-background-color: rgb(250, 241, 228);
-border: 2px solid black;
-width: 70%
+@media (min-width:668px) and (max-width: 1150px){
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    height: 400px;
+    align-items: center;
+    background-color: rgb(250, 241, 228);
+    border: 2px solid black;
+    width: 70%;
+    min-width: 650px;  
+}
+@media (min-width: 1150px) {
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    height: 500px;
+    align-items: center;
+    background-color: rgb(250, 241, 228);
+    border: 2px solid black;
+    width: 70%;
+    min-width: 1100px;
 }
 `
 
@@ -106,7 +118,13 @@ export const Image = styled.img`
   width: 100%;
   height: auto;
   margin-top: 15px;
-  @media (min-width: 668px) {
+    @media (min-width:668px) and (max-width: 1150px){
+    width: 50%;
+    max-width: auto;
+    height: 300px;
+    margin: 15px;
+  }
+  @media (min-width: 1150px) {
     width: 50%;
     max-width: auto;
     height: 460px;
@@ -125,7 +143,14 @@ export const ImageFirst = styled.img`
 
 export const ImageLast = styled.img`
     display:none;
-  @media (min-width: 668px) {
+    @media (min-width:668px) and (max-width: 1150px){
+    display: unset;
+    width: 50%;
+    max-width: auto;
+    height: 300px;
+    margin: 15px;   
+    }
+  @media (min-width: 1150px) {
     display: unset;
     width: 50%;
     max-width: auto;

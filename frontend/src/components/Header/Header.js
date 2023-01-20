@@ -104,7 +104,6 @@ height: 45px;
 `
 
 const NavMenu = styled.nav`
-    border: 2px solid yellow;
     background-color: white;
     display: flex;
     flex-direction: row;

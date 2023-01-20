@@ -59,7 +59,7 @@ export const Arrow = styled.div`
   width: 55px;
   height: 55px;
   position: absolute;
-  top: 75%;
+  top: 85%;
   scroll-behavior: smooth;
   a{
   color: white;
