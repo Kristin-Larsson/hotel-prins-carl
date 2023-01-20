@@ -10,6 +10,7 @@ I still have a long way to go before it's done, this is just a start.
 
 Left to do:
 - Drop down to change language (I have started by using "i18next")
+- Add and correct text
 - Change all images and add to slide show
 - Styling of image sizes
 - Sign up to newsletter
