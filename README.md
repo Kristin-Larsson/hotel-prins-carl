@@ -1,13 +1,13 @@
-# Project Auth API
+# Final Project
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+On going project to create a new website for Hotel Prins Carl.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+To create a posibility to book a room I have used a script tag from the bookingsite Sirvoy that is connected to all the other sites where you can check availability and book a room. The hotel asked for a website that is easy to navigate. I have created a guestbook to add on backend to this project.
+
+I will continue with this project and change styling, images and add a possibility to receive newsletter.
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://hotelprins.netlify.app/
