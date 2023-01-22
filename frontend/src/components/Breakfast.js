@@ -1,5 +1,5 @@
 import React from 'react';
-import SlideShowYstad from 'components/Slideshow/SlideShowYstad'
+import SlideShowBreakfast from 'components/Slideshow/SlideShowBreakfast'
 import { OuterWrapper, InnerWrapper, Section, H1, P } from 'styles/MainStyles';
 import Footer from 'components/Footer';
 import styled from 'styled-components';
@@ -12,10 +12,10 @@ const Breakfast = () => {
         <InnerWrapper>
         <Section id="info">
         <H1>Breakfast is included</H1>
-          <P>Text om frukost och event som ni har med gästkockar på kvällarna</P>
-          <SlideShowYstad />
+          <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</P>
+          <SlideShowBreakfast />
         <Highlight>
-          <P>kom och ät frukost hos oss utan att bo på hotellet 100kr</P>
+          <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</P>
           </Highlight>
         </Section>
 

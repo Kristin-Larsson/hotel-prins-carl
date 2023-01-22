@@ -18,10 +18,10 @@ const Footer = () => {
         </label>
             <SendButton type="submit">SEND</SendButton>
         </InputButtonWrapper>
-        <TitleLeft>LINKS</TitleLeft>
+        {/* <TitleLeft>LINKS</TitleLeft>
         <TextLeft>Book a room</TextLeft>
         <TextLeft>Contact us</TextLeft>
-        <TextLeft>Information</TextLeft>
+        <TextLeft>Information</TextLeft> */}
         </InnerWrapperFooter>
     </OuterWrapper>
     )

@@ -96,7 +96,6 @@ background-color: white;
     height: 400px;
     align-items: center;
     background-color: rgb(250, 241, 228);
-    border: 2px solid black;
     width: 70%;
     min-width: 650px;  
 }
@@ -104,11 +103,10 @@ background-color: white;
     border-radius: 5px;
     display: flex;
     flex-direction: row;
-    height: 500px;
+    height: 600px;
     align-items: center;
     background-color: rgb(250, 241, 228);
-    border: 2px solid black;
-    width: 70%;
+    width: 80%;
     min-width: 1100px;
 }
 `
@@ -128,8 +126,16 @@ export const Image = styled.img`
     width: 50%;
     max-width: auto;
     height: 460px;
-    margin: 15px;
+    margin: 55px;
     }
+`
+
+export const SlideShowCenter = styled(Image)`
+    @media (min-width:668px){
+    width: 100%;
+    height: auto;
+    margin-top: 15px;
+  }
 `
 
 export const ImageFirst = styled.img`
