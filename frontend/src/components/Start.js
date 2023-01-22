@@ -12,7 +12,7 @@ import { HeroSection, OverlayWrapper, StartText, Button, Arrow, Icon, ArrowRight
 import { OuterWrapper, InnerWrapper, H1, P, Image, ImageFirst, ImageLast, Section, LastSection, SectionContainer } from 'styles/MainStyles';
 import { useTranslation } from "react-i18next";
 
-const StartMobile = () => {
+const Start = () => {
 const { t } = useTranslation();
 
     return (
@@ -66,4 +66,4 @@ const { t } = useTranslation();
     </>
     )
 }
-export default StartMobile;
+export default Start;
