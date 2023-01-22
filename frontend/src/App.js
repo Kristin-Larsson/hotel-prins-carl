@@ -17,7 +17,6 @@ import AboutUs from 'components/AboutUs';
 
 export const App = () => {
   const [locale, setLocale] = useState(i18n.language);
-  const [loading, setLoading] = useState(false)
 
   i18n.on('languageChanged', (lng) => setLocale(i18n.language));
 
