@@ -6,4 +6,4 @@ status = 200
 [build]
   base = "frontend/"
   publish = "build/"
-  command = "npm run build"
+  command = command = "CI= npm run build"
