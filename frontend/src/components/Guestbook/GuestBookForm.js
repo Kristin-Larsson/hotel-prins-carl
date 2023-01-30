@@ -68,7 +68,7 @@ const GuestBookFormWrapper = styled.section`
 const TextAreaName = styled.textarea`
   font-family: 'Playfair Display', serif;
   resize: none;
-  height: 20px;
+  height: 40px;
   margin-left: 20px;
   width: 80%;
     @media (min-width: 668px) {
@@ -88,7 +88,7 @@ const TextArea = styled.textarea`
 const TextAreaCountry = styled.textarea`
   font-family: 'Playfair Display', serif;
   resize: none;
-  height: 30px;
+  height: 38px;
   margin-left: 10px;
   width: 90%;
     @media (min-width: 668px) {

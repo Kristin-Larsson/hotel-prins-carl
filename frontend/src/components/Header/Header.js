@@ -2,15 +2,11 @@ import React from 'react';
 import Logo from 'images/prinscarl_logo.png'
 import Phone from 'icons/phone.png'
 import styled from 'styled-components'
-import { useTranslation } from "react-i18next";
-import NavigationPhone from './NavigationPhone';
 
 const Header = () => {
-const { t } = useTranslation();
 
     return (
     <>
-    <NavigationPhone/>
     <NavMenu>
     <a href="/"><Image src={Logo} alt="Prins Carl Logo"/></a>
     <a href="/info"><ContactButton>Contact us</ContactButton></a>
@@ -22,7 +18,6 @@ const { t } = useTranslation();
       <a href="/info">Contact & information |</a>
       <a href="/breakfast">Breakfast |</a>
       <a href="/Events">Events |</a>
-      <a href="#">Photoalbum |</a>
       <a href="/aboutus">About us |</a>
       <a href="/guestbook">Guestbook |</a>
       </div>

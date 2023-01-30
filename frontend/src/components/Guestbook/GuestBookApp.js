@@ -22,7 +22,7 @@ const GuestBookApp = () => {
   }
 
   useEffect(()=> {
-    fetchMessage();
+    fetchMessage()
   }, [])
 
   const fetchMessage = () => {
@@ -69,10 +69,10 @@ const GuestBookApp = () => {
         key={message._id}
         message={message}
         />
-      ))};
+      ))}
     </InnerWrapper> 
     </OuterWrapper>
   );
 };
 
-export default GuestBookApp;
+export default GuestBookApp

@@ -54,7 +54,6 @@ app.get("/guestbook", async (req, res) => {
     const guestbookToReturn = await GuestBook.find().sort({ createdAt: -1 }).limit(20)
     res.status(200).json(guestbookToReturn)
   } catch (error) {
-    console.log(error)
     res.status(400).json({
       success: false,
       body: { 
@@ -70,22 +69,9 @@ app.post("/guestbook", async (req, res) => {
     const newGuestBook = await new GuestBook({ message, name, country }).save()
     res.status(201).json({success: true, res: newGuestBook})
   } catch (e) {
-    console.log(e)
     res.status(400).json({ success: false, response: e })
   }
 })
-
-// app.delete ('delete/:id', async (req, res) => {
-// const id= req.params.id
-// GuestBook.findByIdAndRemove({ _id: id }, function(err){
-//   if(err){
-//     console.log(err)
-//     return res.status(500).send()
-//     }
-// return res.status(200).send()
-// }
-// )
-// })
 
 app.delete("/delete/:id", async (req, res) => {
   const id = req.params.id
@@ -93,7 +79,6 @@ app.delete("/delete/:id", async (req, res) => {
     const guestbookToDelete = await GuestBook.deleteOne({ _id: id })
     res.status(200).json(guestbookToDelete)
   } catch (error) {
-    console.log(error)
     res.status(400).json({
       success: false,
       body: { 
@@ -129,15 +114,10 @@ app.post('/guestbook/:guestbookId/like', async (req, res) => {
     // Send message back in the response
     res.json(guestbookToLike)
   } catch (error) {
-    console.log(error)
 
     res.json({
       success: false,
       error: error
     })
   }
-})
-
-app.listen(port, () => {
-  console.log(`Server running on http://localhost:${port}`)
 })
