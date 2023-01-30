@@ -1,5 +1,4 @@
 import React from 'react'
-import { H1 } from 'styles/MainStyles';
 import styled from 'styled-components/macro';
 
 const GuestBookForm = ( { onFormSubmit, newMessage, onSetMessageChange, onSetNameChange, newName, onSetCountryChange, newCountry } ) => {
@@ -65,12 +64,27 @@ const GuestBookFormWrapper = styled.section`
     height: 400px;
     }
 `
+
+const H1 = styled.h1`
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    font-size: 25px;
+    color: black;
+    margin-left: -50px;
+    @media (min-width: 668px) {
+    font-size: 30px;   
+    }
+`
+
 const TextAreaName = styled.textarea`
   font-family: 'Playfair Display', serif;
   resize: none;
   height: 40px;
   margin-left: 20px;
   width: 80%;
+  ::placeholder {
+    padding-top: 5px;
+    }
     @media (min-width: 668px) {
     }
 `
@@ -81,6 +95,9 @@ const TextArea = styled.textarea`
   height: 65px;
   margin-left: 20px;
   width: 80%;
+  ::placeholder {
+    padding-top: 15px;
+    }
     @media (min-width: 668px) {
     }
 `
@@ -91,6 +108,9 @@ const TextAreaCountry = styled.textarea`
   height: 38px;
   margin-left: 10px;
   width: 90%;
+  ::placeholder {
+    padding-top: 5px;
+    }
     @media (min-width: 668px) {
     }
 `
